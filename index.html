@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#2874f0"><meta name="description" content="Orbit — discover your next favourite.">
+  <title>Orbit — Shopping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body>
+  <div class="store-top">
+    <header class="topbar">
+      <button class="menu-button" id="menuButton" aria-label="Open navigation">☰</button>
+      <a class="brand" href="#" id="homeBrand"><span class="brand-symbol" aria-hidden="true"></span><span>orbit<span class="brand-dot">.</span><small>Explore <i>Plus</i></small></span></a>
+      <form class="search-bar" id="searchForm" role="search"><svg class="search-leading" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.2 4.2"/></svg><input id="searchInput" type="search" placeholder="Search for products, brands and more" aria-label="Search products"><button aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.2 4.2"/></svg></button></form>
+      <button class="login-button" id="loginButton"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.3"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="12" cy="12" r="10"/></svg>Login <span class="login-caret">⌄</span></button>
+      <button class="top-link" id="adminTop">Admin</button>
+      <button class="cart-link" id="cartButton"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 3h2l2.3 12.2a2 2 0 0 0 2 1.6h9.3a2 2 0 0 0 1.9-1.4L22 8H6"/><circle cx="9" cy="20" r="1.2"/><circle cx="18" cy="20" r="1.2"/></svg></span> Cart <b id="cartCount">0</b></button>
+    </header>
+  </div>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-head"><span>MENU</span><button id="closeMenu" aria-label="Close navigation">×</button></div>
+      <button class="side-link selected" data-page="shop"><span>⌂</span> Home</button>
+      <button class="side-link" data-page="saved"><span>♡</span> Saved items</button>
+      <button class="side-link" data-page="orders"><span>▤</span> My orders</button>
+      <div class="side-divider"></div>
+      <span class="side-caption">SHOP BY CATEGORY</span>
+      <button class="side-link category-link" data-category="Electronics"><span>▣</span> Electronics</button>
+      <button class="side-link category-link" data-category="Fashion"><span>♧</span> Fashion</button>
+      <button class="side-link category-link" data-category="Home"><span>⌂</span> Home & Living</button>
+      <button class="side-link category-link" data-category="Appliances"><span>▤</span> Appliances</button>
+      <button class="side-link category-link" data-category="Books"><span>▧</span> Books</button>
+      <div class="side-divider"></div>
+      <button class="side-link admin-side" data-page="admin"><span>⚙</span> Admin panel <em>Manage</em></button>
+      <div class="sidebar-note"><b>Orbit, for your everyday.</b><p>Good finds are just around the corner.</p></div>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+
+    <main class="main-content" id="mainContent">
+      <section class="shop-view" id="shopView">
+        <nav class="category-rail" aria-label="Categories">
+          <button class="rail-item active" data-category="All"><span class="rail-icon all-icon">◉</span><span class="rail-label">For You</span></button>
+          <button class="rail-item" data-category="Electronics"><span class="rail-icon electronics-icon">▣</span><span class="rail-label">Electronics</span></button>
+          <button class="rail-item" data-category="Fashion"><span class="rail-icon fashion-icon">♧</span><span class="rail-label">Fashion</span></button>
+          <button class="rail-item" data-category="Home"><span class="rail-icon home-icon">⌂</span><span class="rail-label">Home</span></button>
+          <button class="rail-item" data-category="Appliances"><span class="rail-icon appliance-icon">▤</span><span class="rail-label">Appliances</span></button>
+          <button class="rail-item" data-category="Books"><span class="rail-icon book-icon">▧</span><span class="rail-label">Books</span></button>
+          <button class="rail-item" data-category="Beauty"><span class="rail-icon beauty-icon">✿</span><span class="rail-label">Beauty</span></button>
+          <button class="rail-item" data-category="Sports"><span class="rail-icon sports-icon">◎</span><span class="rail-label">Sports</span></button>
+        </nav>
+        <section class="hero-banner">
+          <img class="hero-photo" alt="" aria-hidden="true" hidden>
+          <div class="hero-text"><span class="hero-tag">A NEW WAY TO DISCOVER</span><h1>Big days.<br><em>Bright finds.</em></h1><p>Your next favourite is waiting to be added.</p><button id="heroExplore">Explore categories <b>→</b></button></div>
+          <div class="hero-scene" aria-hidden="true"><div class="scene-sun"></div><div class="scene-ring ring-a"></div><div class="scene-ring ring-b"></div><div class="scene-cube cube-a">○</div><div class="scene-cube cube-b">◈</div><div class="scene-cube cube-c">↗</div><div class="scene-floor"></div></div>
+          <div class="banner-dots"><i class="on"></i><i></i><i></i></div><button class="banner-arrow left" aria-label="Previous banner">‹</button><button class="banner-arrow right" aria-label="Next banner">›</button>
+        </section>
+        <section class="category-campaigns" id="categoryCampaigns" aria-label="Explore categories"></section>
+        <div id="customSections"></div>
+        <section class="catalog-section">
+          <div class="catalog-head"><div><div class="title-row"><h2 id="catalogTitle">Discover products</h2><span class="result-count" id="resultCount"></span></div><p id="catalogSubtitle">The latest finds, all in one place</p></div><div class="catalog-actions"><button class="filter-button" id="filterToggle">☷ <span>Filter</span></button><label class="sort-label">Sort by <select id="sortSelect"><option value="featured">Recommended</option><option value="price-low">Price: Low to High</option><option value="price-high">Price: High to Low</option><option value="name">Name</option><option value="newest">Newest</option></select></label></div></div>
+          <div class="filter-panel" id="filterPanel"><div><b>Category</b><div class="filter-options" id="filterCategories"></div></div><label class="price-filter">Maximum price <span id="priceValue">Any</span><input id="priceRange" type="range" min="0" max="100000" step="500" value="100000"></label><button class="clear-filter" id="clearFilters">Clear filters</button></div>
+          <div class="product-grid" id="productGrid"></div>
+        </section>
+      </section>
+
+      <section class="admin-view hidden" id="adminView">
+        <div class="admin-heading"><div><div class="crumb">ORBIT <span>›</span> ADMIN</div><h1>Admin dashboard</h1><p>Manage your shop, catalogue and customer activity.</p></div><button class="primary-button" id="addProductTop">＋ Add product</button></div>
+        <div class="stats-grid"><article class="stat-card"><span class="stat-icon blue">▧</span><div><small>Products</small><strong id="statProducts">0</strong></div><span class="stat-foot">In your catalogue</span></article><article class="stat-card"><span class="stat-icon green">▤</span><div><small>Orders</small><strong id="statOrders">0</strong></div><span class="stat-foot">Received to date</span></article><article class="stat-card"><span class="stat-icon purple">♙</span><div><small>Customers</small><strong id="statUsers">0</strong></div><span class="stat-foot">Registered customers</span></article><article class="stat-card"><span class="stat-icon orange">₹</span><div><small>Sales</small><strong id="statSales">₹0</strong></div><span class="stat-foot">From recorded orders</span></article></div>
+        <div class="admin-tabs" role="tablist"><button class="admin-tab active" data-admin-tab="products">Products <span id="tabProductCount">0</span></button><button class="admin-tab" data-admin-tab="orders">Orders <span id="tabOrderCount">0</span></button><button class="admin-tab" data-admin-tab="users">Customers <span id="tabUserCount">0</span></button><button class="admin-tab" data-admin-tab="categories">Categories</button><button class="admin-tab" data-admin-tab="sections">Home sections</button><button class="admin-tab" data-admin-tab="banners">Banners</button><button class="admin-tab" data-admin-tab="settings">Store settings</button></div>
+        <div class="admin-panel" id="adminPanel"></div>
+      </section>
+    </main>
+  </div>
+  <nav class="mobile-nav"><button class="mobile-nav-item active" data-page="shop"><span>⌂</span>Home</button><button class="mobile-nav-item" id="mobileCategories"><span>☷</span>Categories</button><button class="mobile-nav-item" id="mobileCart"><span>🛒</span>Cart</button><button class="mobile-nav-item" data-page="admin"><span>⚙</span>Admin</button></nav>
+  <dialog id="productDialog"><form id="productForm" class="product-form" method="dialog"><div class="dialog-head"><div><span class="crumb">CATALOGUE</span><h2 id="productDialogTitle">Add a product</h2></div><button type="button" class="dialog-close" id="closeDialog">×</button></div><label>Product name<input name="name" required maxlength="90" placeholder="e.g. Everyday backpack"></label><div class="form-row"><label>Category<select name="category" required id="productCategorySelect"></select></label><label>Price (₹)<input name="price" type="number" min="1" step="1" required placeholder="999"></label></div><div class="form-row"><label>Stock quantity<input name="stock" type="number" min="0" step="1" required value="1"></label><label>Image URL <small>optional</small><input name="image" type="url" placeholder="https://..."></label></div><label>Description<textarea name="description" rows="3" maxlength="240" placeholder="A short product description"></textarea></label><div class="form-actions"><button type="button" class="secondary-button" id="cancelDialog">Cancel</button><button class="primary-button" type="submit">Save product</button></div></form></dialog>
+  <dialog id="entityDialog"><form id="entityForm" class="product-form" method="dialog"></form></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
